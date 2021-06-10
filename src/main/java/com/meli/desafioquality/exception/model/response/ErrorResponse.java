@@ -2,6 +2,7 @@ package com.meli.desafioquality.exception.model.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorResponse {
 
@@ -26,4 +28,5 @@ public class ErrorResponse {
         this.field = field;
         this.message = message;
     }
+
 }

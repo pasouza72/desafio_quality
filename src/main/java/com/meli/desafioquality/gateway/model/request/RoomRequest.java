@@ -29,4 +29,13 @@ public class RoomRequest {
     @NotEmpty(message = "O comprimento do cômodo não pode estar vazio.")
     @Max(value = 33, message = "O comprimento máximo permitido por cômodo é de 33 metros.")
     private Double roomLength;
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"roomName\":\"" + roomName + "\"" +
+                "\"roomWidth\":" + roomWidth +
+                ", \"roomLength\":" + roomLength +
+                '}';
+    }
 }

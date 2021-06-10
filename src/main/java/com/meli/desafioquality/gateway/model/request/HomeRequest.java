@@ -30,4 +30,12 @@ public class HomeRequest {
     @Size(min = 1, message = "A propriedade precisa ter ao menos um cômodo")
     private List<RoomRequest> rooms;
 
+    @Override
+    public String toString() {
+        return "{" +
+                " \"propName\": \"" + propName + "\"" +
+                ", \"propDistrict\":\"" + propDistrict + "\"" +
+                ", \"rooms\":" + rooms +
+                '}';
+    }
 }
