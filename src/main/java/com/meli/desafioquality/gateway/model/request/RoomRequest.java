@@ -18,15 +18,15 @@ public class RoomRequest {
     @NotEmpty(message = "O campo não pode estar vazio.")
     @Pattern(regexp = "^[A-Z]\\w*$", message = "O nome do cômodo deve começar com uma letra maiúscula.")
     @Max(value = 30, message = "O comprimento do cômodo não pode exceder 30 caracteres.")
-    public String roomName;
+    private String roomName;
 
     @JsonProperty("room_width")
     @NotEmpty(message = "A largura do cômodo não pode estar vazia.")
     @Max(value = 25, message = "A largura máxima permitida por cômodo é de 25 metros")
-    public String roomWidth;
+    private Double roomWidth;
 
     @JsonProperty("room_length")
     @NotEmpty(message = "O comprimento do cômodo não pode estar vazio.")
     @Max(value = 33, message = "O comprimento máximo permitido por cômodo é de 33 metros.")
-    public String roomLength;
+    private Double roomLength;
 }

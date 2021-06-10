@@ -1,0 +1,16 @@
+{
+  "prop_name": "Casa1",
+  "prop_district": "Bairro1",
+  "rooms": [
+    {
+      "room_name": "Sala1",
+      "room_width": 10.0,
+      "room_length": 10.0
+    },
+    {
+      "room_name": "Sala2",
+      "room_width": 20.0,
+      "room_length": 20.0
+    }
+  ]
+}
