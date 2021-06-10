@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -28,6 +29,7 @@ public class HomeRequest {
     private String propDistrict;
 
     @Size(min = 1, message = "A propriedade precisa ter ao menos um cômodo")
+    @Valid
     private List<RoomRequest> rooms;
 
     @Override
