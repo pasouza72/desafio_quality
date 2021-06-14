@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -30,13 +31,14 @@ public class HomeRequest {
 
     @Size(min = 1, message = "A propriedade precisa ter ao menos um cômodo")
     @Valid
+    @NotNull
     private List<RoomRequest> rooms;
 
     @Override
     public String toString() {
         return "{" +
-                " \"propName\": \"" + propName + "\"" +
-                ", \"propDistrict\":\"" + propDistrict + "\"" +
+                " \"prop_name\": \"" + propName + "\"" +
+                ", \"prop_district\":\"" + propDistrict + "\"" +
                 ", \"rooms\":" + rooms +
                 '}';
     }

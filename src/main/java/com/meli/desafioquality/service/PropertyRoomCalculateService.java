@@ -15,9 +15,9 @@ public class PropertyRoomCalculateService {
 
     public List<RoomResponse> calculate(HomeRequest request) {
         return request.getRooms()
-                .stream()
-                .map(this::mountRoomResponse)
-                .collect(Collectors.toList());
+                        .stream()
+                        .map(this::mountRoomResponse)
+                        .collect(Collectors.toList());
     }
 
     private RoomResponse mountRoomResponse(RoomRequest request) {

@@ -2,14 +2,18 @@ package com.meli.desafioquality.gateway.model.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.validation.constraints.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 @Data
+//@Builder
 public class RoomRequest {
 
     @JsonProperty("room_name")
@@ -31,9 +35,9 @@ public class RoomRequest {
     @Override
     public String toString() {
         return "{" +
-                "\"roomName\":\"" + roomName + "\"" +
-                "\"roomWidth\":" + roomWidth +
-                ", \"roomLength\":" + roomLength +
+                "\"room_name\":\"" + roomName + "\"," +
+                "\"room_width\":" + roomWidth +
+                ",\"room_length\":" + roomLength +
                 '}';
     }
 }

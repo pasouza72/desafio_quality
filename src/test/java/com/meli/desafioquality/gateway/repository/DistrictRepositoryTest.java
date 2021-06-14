@@ -13,7 +13,7 @@ class DistrictRepositoryTest {
 
     @Test
     void shouldReturnNumberWhenDistrictExist(){
-        Double value = districtRepository.findDistrictPriceByName("Casa1");
+        Double value = districtRepository.findDistrictPriceByName("Bairro1");
 
         assertEquals(5.0, value);
     }

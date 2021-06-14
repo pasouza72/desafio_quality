@@ -9,12 +9,12 @@ import java.util.Map;
 @Component
 public class DistrictRepository {
 
-    private final Map<String, Double> districts = new HashMap<>();
+    private static final Map<String, Double> districts = new HashMap<>();
 
-    public DistrictRepository(){
-        districts.put("Casa1", 5.0);
-        districts.put("Casa2", 6.0);
-        districts.put("Casa3", 7.0);
+    static {
+        districts.put("Bairro1", 5.0);
+        districts.put("Bairro2", 6.0);
+        districts.put("Bairro3", 7.0);
     }
 
     public Double findDistrictPriceByName(String propDistrict) {

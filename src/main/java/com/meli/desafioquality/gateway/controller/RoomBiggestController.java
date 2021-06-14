@@ -17,7 +17,7 @@ public class RoomBiggestController extends PropertyCalculateController{
 
     private final RoomBiggestService roomBiggestService;
 
-    @PostMapping(value = "/calculation/room")
+    @PostMapping(value = "/calculation/room/biggest")
     public ResponseEntity<RoomResponse> calculate(@RequestBody @Valid HomeRequest request){
         RoomResponse response = roomBiggestService.calculate(request);
 

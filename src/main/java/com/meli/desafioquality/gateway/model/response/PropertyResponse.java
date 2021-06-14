@@ -16,4 +16,12 @@ public class PropertyResponse {
     private Double squareMetersTotal;
 
     private Double value;
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"squareMetersTotal\":" + squareMetersTotal +
+                ",\"value\":" + value +
+                '}';
+    }
 }
