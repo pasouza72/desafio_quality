@@ -17,7 +17,7 @@ public class SquareMetersCalculateController extends PropertyCalculateController
 
     private final PropertyService propertyService;
 
-    @PostMapping(value = "/calculation/square/meters")
+    @PostMapping(value = "/square/meters")
     public ResponseEntity<PropertyResponse> calculate(@RequestBody @Valid HomeRequest request){
         PropertyResponse response = propertyService.calculate(request);
 

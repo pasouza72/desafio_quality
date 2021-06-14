@@ -17,7 +17,7 @@ public class PropertyPriceCalculateController extends PropertyCalculateControlle
 
     private final PropertyPriceService propertyPriceService;
 
-    @PostMapping(value = "/calculation/price")
+    @PostMapping(value = "/price")
     public ResponseEntity<PropertyResponse> calculate(@RequestBody @Valid HomeRequest request){
         PropertyResponse response = propertyPriceService.calculate(request);
 

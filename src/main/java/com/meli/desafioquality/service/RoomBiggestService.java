@@ -19,9 +19,11 @@ public class RoomBiggestService {
     public RoomResponse calculate(HomeRequest request) {
         List<RoomRequest> rooms = request.getRooms();
 
-        Comparator<RoomRequest> comparing = comparing(r -> (r.getRoomLength() * r.getRoomWidth())); //TODO Fazer um serviço para lhe dar com essa conta
+        Comparator<RoomRequest> comparing = comparing(RoomRequest::getSquareMeterCalculated);
         RoomRequest greatestRoom =  max(rooms, comparing);
 
         return new RoomResponse(greatestRoom);
     }
+
+
 }

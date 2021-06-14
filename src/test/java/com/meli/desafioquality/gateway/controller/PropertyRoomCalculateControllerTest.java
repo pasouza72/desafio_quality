@@ -1,7 +1,6 @@
 package com.meli.desafioquality.gateway.controller;
 
 import com.meli.desafioquality.gateway.model.request.HomeRequest;
-import com.meli.desafioquality.gateway.model.request.RoomRequest;
 import com.meli.desafioquality.gateway.model.response.RoomResponse;
 import com.meli.desafioquality.util.PropertyJsonUtil;
 import org.junit.jupiter.api.Test;
@@ -14,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -26,7 +25,7 @@ class PropertyRoomCalculateControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    private final static String URL = "/props/calculate/room";
+    private final static String URL = "/props/calculation/room";
 
     @Test
     void shouldReturnOkWhenPayloadIsOk() throws Exception {

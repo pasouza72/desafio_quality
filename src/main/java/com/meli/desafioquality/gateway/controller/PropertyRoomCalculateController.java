@@ -18,7 +18,7 @@ public class PropertyRoomCalculateController extends PropertyCalculateController
 
     private final PropertyRoomCalculateService service;
 
-    @PostMapping("/calculate/room")
+    @PostMapping("/room")
     public ResponseEntity<List<RoomResponse>> calculate(@RequestBody @Valid HomeRequest request){
         List<RoomResponse> response = service.calculate(request);
 

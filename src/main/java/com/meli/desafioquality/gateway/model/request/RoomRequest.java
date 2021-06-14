@@ -1,8 +1,8 @@
 package com.meli.desafioquality.gateway.model.request;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -13,7 +13,6 @@ import javax.validation.constraints.*;
 @NoArgsConstructor
 @SuperBuilder
 @Data
-//@Builder
 public class RoomRequest {
 
     @JsonProperty("room_name")
@@ -39,5 +38,10 @@ public class RoomRequest {
                 "\"room_width\":" + roomWidth +
                 ",\"room_length\":" + roomLength +
                 '}';
+    }
+
+    @JsonIgnore
+    public Double getSquareMeterCalculated(){
+        return this.roomLength * this.roomWidth;
     }
 }
